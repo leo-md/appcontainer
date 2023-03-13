@@ -1,0 +1,30 @@
+CREATE DATABASE cybercontainer;
+
+USE cybercontainer;
+
+CREATE TABLE containers (
+	cliente VARCHAR(55) NOT NULL,
+    chassi VARCHAR(11) NOT NULL,
+    tipo VARCHAR(2) NOT NULL,
+    status VARCHAR(5) NOT NULL,
+    categoria VARCHAR(10) NOT NULL,
+    PRIMARY KEY(chassi)
+);
+
+CREATE TABLE movimentacoes (
+	id INT AUTO_INCREMENT NOT NULL,
+	tipoMov VARCHAR(20) NOT NULL,
+    dataInicio DATE NOT NULL,
+    horaInicio time(4) NOT NULL,
+    dataFim DATE NOT NULL,
+    horaFim TIME(4) NOT NULL,
+    codContainer VARCHAR(11) NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY (codContainer) REFERENCES containers (chassi)
+);
+
+INSERT INTO containers VALUES 
+('Barbosa SA','BARB1234567','40','Cheio','Importação'),
+('Barbosa SA','BARB8901234','20','Cheio','Exportação'),
+('Jack LTDA' ,'JACK1234567','40','Cheio','Exportacao'),
+('Jack LTDA' ,'JACK8901234','40','Vazio','Importação');
