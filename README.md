@@ -5,7 +5,7 @@
 Aplicação web para gerenciamento portuário de containers
 
 
-Proposta AppContainer 
+## Proposta AppContainer 
 
 São requisitos funcionais da aplicação: 
 1. Crud de Contêiner <br>
@@ -24,4 +24,13 @@ Premissas para todos os artefatos:  <br>
 ● O leiaute dos controles de manutenção dos dados não precisa ser de um CRUD padrão. Pode sentir-se à vontade para criar mecanismos de interação mais criativos e funcionais. <br>
 ● Validações  <br>
 ● Ordenações  <br>
-● Filtros
+● Filtros <br>
+
+
+
+## Recomendações
+
+Tendo em vista que o sistema está sendo desenvolvido em linguagem de programação PHP, a parte lógica da aplicação roda a nível de servidor. Nesse sentido é recomendado a utilização de um servidor de desenvolvimento Xampp.
+
+A aplicação também utiliza um banco de dados MySQL como base. O script da criação de toda a estrutura do banco de dados, bem como as inserções iniciais, está disponível na pasta 'assets'.
+
